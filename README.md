@@ -71,14 +71,14 @@ Static build is by default output in `/dist` directory.
 
 ```sh
 # output in /dist
-yarn && yarn build
+yarn install && yarn build
 ```
 
 3. Ongoing customization
 
 UI can be customized through global presets in `public/presets.js`. Following is its type definition and properties description.
 
-**Note:** Chains can be set in presets. Default is set in env before build. It can be *overridden by preset* chain with default flag.
+**Note:** Chains can be set in presets. Default is set in env before build. It can be *overridden by the first preset chain with default flag*.
 
 ``` typescript
 export type ConfigType = {
@@ -191,6 +191,11 @@ projection by metamask
 
 - `wagmi` doesn't easily interoperate with `web3modal`.
 
+## Reusable Code
+
+- DeFileManager from `pacakges/filemanager` is built to move out of repo.
+
+- Deploy scripts can be snippetized.
 
 ## Codebase: Structure
 
